@@ -1,0 +1,84 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_user":"6",
+    "name": "Ernesto Cruz",
+    "age":"25",
+    "rol":"Gerente General"
+}
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/63493ddc6fda88d2ad1d9047 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/63493ddc6fda88d2ad1d9047 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_user":"2",
+    "name": "Luis Galvan",
+    "age":"40",
+    "rol":"Chofer de entregas"
+}
+
+###
+DELETE http://localhost:9000/api/users/6349448a195dd583e452e60c HTTP/1.1
+
+### Roles
+PUT http://localhost:9000/api/rols/6350ad3d4364ed63b09f04b HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_rol":"2",
+    "name_rol": "chofer",
+    "codigo":"3835"
+    
+}
+
+### Pagos
+POST http://localhost:9000/api/pagos HTTP/1.1
+Content-Type: application/json
+
+{
+    "mPago":"Credito",
+    "name": "Solar min",
+    "codigo":"3534"
+    
+}
+
+### Sucursal
+POST http://localhost:9000/api/sucursals HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"Soriana",
+    "codigo": "22105",
+    "telefono":"6643834245",
+    "direccion":"Plaza Monarca"
+    
+}
+
+### ver sucursales
+GET http://localhost:9000/api/sucursals
+
+### Ventas
+POST http://localhost:9000/api/ventas
+Content-Type: application/json
+
+{
+    "producto":"Cereales",
+    "sucursal": "Walmart",
+    "user":"Carlos Cruz",
+    "mPago":"Efectivo"
+    
+}
+###
+GET http://localhost:9000/api/ventas HTTP/1.1
+
+###Productos
+POST http://localhost:9000/api/productos
